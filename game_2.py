@@ -1,11 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # Import relevant packages
-
-# In[1]:
-
-
 import sys
 ###sys module to exit the game###
 import pygame
@@ -13,7 +6,6 @@ import pygame
 Define classes
     Settings to determine background settings
     Ship to load player sprite and define initial position
-# In[2]:
 
 
 class Settings():
@@ -26,9 +18,6 @@ class Settings():
         ###In pygame, (0,0) is top left of screen, (max.x,max.y) is the bottom right###
         self.ship_speed_factor=1.5
         ###Gives a dynamic figure of ship speed###
-
-
-# In[3]:
 
 
 class Ship():
@@ -68,9 +57,8 @@ class Ship():
         ###Draw ship at current location###
         
 
-Define controls
-    Check_events to check for player input and corresponding returns for KEYDOWN/KEYUP
-# In[4]:
+#Define controls
+    #Check_events to check for player input and corresponding returns for KEYDOWN/KEYUP
 
 
 def check_events(ship):
@@ -87,8 +75,6 @@ def check_events(ship):
             ###KEYUP to detect when input ends###
 
 
-# In[5]:
-
 
 def check_keydown_events(event,ship):
     if event.key == pygame.K_RIGHT:
@@ -98,8 +84,6 @@ def check_keydown_events(event,ship):
         ship.moving_left=True
 
 
-# In[6]:
-
 
 def check_keyup_events(event,ship):
     if event.key == pygame.K_RIGHT:
@@ -108,10 +92,6 @@ def check_keyup_events(event,ship):
     elif event.key == pygame.K_LEFT:
         ship.moving_left =False
 
-
-# Updates the screen to control for movement of player sprite and control background colors
-
-# In[7]:
 
 
 def update_screen(ai_settings,screen,ship):
@@ -124,9 +104,6 @@ def update_screen(ai_settings,screen,ship):
 
 
 # Body of the game
-
-# In[8]:
-
 
 ###basic running of game to initialise the window, and its size and to close###
 def run_game():
@@ -147,15 +124,8 @@ def run_game():
         ###Update screen settings accordingly###
 
 
-# In[9]:
-
-
 run_game()
 
-
-# 250/317
-
-# In[ ]:
 
 
 
